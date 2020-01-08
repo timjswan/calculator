@@ -61,7 +61,7 @@ class AnalogClock extends Clock {
 
 const App: React.FC = () => {
 
-  let clock = new Clock();
+  let clock = createClock(Clock);
   clock.setTime(new Date());
   let date: Date = clock.getTime();
 
