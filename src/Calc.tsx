@@ -7,7 +7,7 @@ export default class Calc extends React.Component {
         return (
             <div className="Calc">
                 <h1>Tim's Calc</h1>
-                <Input placeholder="Basic usage" />
+                <Input placeholder="0" />
                 <div className="keyboard">                    
                     <Button type="primary" className="key">+</Button>
                     <Button type="primary" className="key">-</Button>
