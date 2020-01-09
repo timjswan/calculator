@@ -1,0 +1,20 @@
+.Calc {
+    width: 20rem;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    margin: 0 auto;
+    position: relative;
+    top: 1rem;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.key {
+    position: relative;
+    margin-top: 1rem;
+    display: inline-flex;
+}
