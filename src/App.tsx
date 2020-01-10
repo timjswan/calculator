@@ -2,8 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { runInThisContext } from 'vm';
-import Calc from './Calc';
-
+import Calc from './components/organisms/calc';
 
 const App: React.FC = () => {
     return (
