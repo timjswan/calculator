@@ -5,21 +5,11 @@ import "./key.css";
 
 interface KeyProps {
     function: string;
-}
-
-interface KeyMap {
-    [index: string]: string;
-}
-
-let keyMap: KeyMap = {
-    add: "+",
-    subtract: "-",
-    divide: "÷",
-    clear: "C"
+    symbol: string;
 }
 
 const Key: React.FC<KeyProps> = (props) => {
-    return <Button type="primary" className="key">{keyMap[props.function]}</Button>
+    return <Button type="primary" className="key">{props.symbol}</Button>
 };
 
 export default Key;

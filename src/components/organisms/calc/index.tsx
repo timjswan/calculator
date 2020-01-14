@@ -1,6 +1,6 @@
 import React from 'react';
 import KeyBoard from '../../molecules/keyboard';
-import Screen from '../../atoms/screen';
+import Screen from '../../molecules/screen';
 
 import './calc.css';
 
