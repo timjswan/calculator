@@ -1,5 +1,5 @@
 import { createStore, compose } from 'redux';
-import screenChangeReducer from '../reducers/screen';
+import reducers from '../reducers';
 
 declare global {
     interface Window {
@@ -9,4 +9,4 @@ declare global {
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export default createStore(screenChangeReducer, composeEnhancers());
+export default createStore(reducers, composeEnhancers());
