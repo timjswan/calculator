@@ -1,4 +1,4 @@
 export default interface KeyClick {
-    history: string; 
-    function: string;
+    history?: string; 
+    do?: (prevNum: number, nextNum: number) => number | void;
 }

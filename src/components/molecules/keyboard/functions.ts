@@ -21,19 +21,5 @@ export let keyBoardFunctions: Array<KeyBoardFunctions> = [
         do: (prevNum: number, nextNum: number) => {
             return prevNum / nextNum;
         }
-    },
-    {
-        symbol: '=',
-        name: 'equals',
-        do: () => {
-            //
-        }
-    },
-    {
-        symbol: 'C',
-        name: 'clear',
-        do: () => {
-            //
-        }
     }
 ]

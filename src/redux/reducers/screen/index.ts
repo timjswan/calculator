@@ -7,7 +7,7 @@ function screenChangeReducer(state: State = { value: '' }, action: Action){
         case SCREEN_CHANGE:                        
             return {
                 ...state,
-                value: action.value
+                value: action.payload
             };
         default:
             return state;

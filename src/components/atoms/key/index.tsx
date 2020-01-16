@@ -1,35 +1,36 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { keyClick } from '../../../redux/actions/key';
+import { screenChange } from '../../../redux/actions/screen';
 import KeyProps from '../../../interfaces/keyprops';
-import KeyType from '../../../interfaces/key';
-import KeyClick from '../../../interfaces/keyclick';
 import { Button } from 'antd';
-import State from '../../../interfaces/state';
 
 import "./key.css";
 
-class Key extends React.Component<KeyProps, State> {
+const Key: React.SFC<KeyProps> = (props: KeyProps) => {
     // TODO remove any type
-    handleClick = (e: any) => {
+    const handleClick = (e: any) => {
         const keyClickPayLoad = {
-            history: this.props.history,
-            function: this.props.function
+            history: props.history,
+            do: props.do
         };
-        this.props.keyClick(keyClickPayLoad);
+        if(props.keyClick && props.screenChange) {
+            props.keyClick(keyClickPayLoad);
+            props.screenChange('');
+        }
+        
     }
 
-    render (){
-        return <Button onClick={this.handleClick} type="primary" className="key">{this.props.symbol}</Button>
-    }
-}
+    return <Button onClick={handleClick} type="primary" className="key">{props.symbol}</Button>
+};
 
 const mapStateToProps = (state: any) => ({
     history: state.screen.value
 });
 
 const mapDispatchToProps = ({
-    keyClick: keyClick
+    keyClick: keyClick,
+    screenChange: screenChange
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Key);
