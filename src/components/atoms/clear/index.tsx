@@ -1,20 +1,20 @@
 import React from 'react';
 import { Button } from 'antd';
 import { connect } from 'react-redux';
-import { screenChange } from '../../../redux/actions/screen';
+import { clear } from '../../../redux/actions/clear';
 import KeyProps from '../../../interfaces/keyprops';
 
 const Clear: React.SFC<KeyProps> = (props) => {
     const handleClick = () => {
-        if(props.screenChange){
-            props.screenChange('');
+        if(props.clear){
+            props.clear('');
         }
     }
     return <Button onClick={handleClick} type="primary" className="key">C</Button>
 };
 
 const mapDispatchToProps = ({
-    screenChange: screenChange
+    clear: clear
 });
 
 export default connect(null, mapDispatchToProps)(Clear);

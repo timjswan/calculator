@@ -16,7 +16,7 @@ export class Screen extends React.Component<ScreenProps,State> implements Screen
     };
 
     render(){
-        return <Input placeholder="0" onChange={this.onChange} value={this.props.value} />
+        return <Input name="screen" placeholder="0" onChange={this.onChange} value={this.props.value} />
     }
 }
 

@@ -6,6 +6,7 @@ export default interface KeyProps {
     do?: (prevNum: number, nextNum: number) => number | void;
     keyClick?: (value: KeyClick) => void;
     screenChange?: (value: string) => void;
+    clear?: (value: string) => void;
     history?: string;
     currentVal?: string;
 }
