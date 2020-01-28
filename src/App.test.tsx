@@ -41,10 +41,10 @@ test('adds 1 + 2', () => {
         <Calc />
     </Provider>,
   );
-  calc.find('Input').simulate('keypress', {key: '1'});
+  calc.find('input').at(0).simulate('change', { target: { name: 'screen', value: 1 } });
   calc.find('Button[children="+"]').simulate('click');
-  calc.find('Input').simulate('keypress', {key: '2'});
+  calc.find('input').at(0).simulate('change', { target: { name: 'screen', value: 2 } });
   calc.find('Button[children="="]').simulate('click');
-  expect(calc.find('Input').props().value).toEqual('3');
+  expect(calc.find('input').at(0).prop('value')).toEqual('3');
 });
 
